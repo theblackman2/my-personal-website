@@ -17,7 +17,7 @@ const NavBar = ({ showLinks, setShowLinks }: navBarProps) => {
     const currentSection: string = router.asPath.substring(2);
     setActiveLink(currentSection || "resume")
     setShowLinks(false);
-  }, [router]);
+  }, [router, setShowLinks]);
 
   return (
     <div id="nav-bar">
