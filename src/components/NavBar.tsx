@@ -1,15 +1,16 @@
+import { navBarProps } from "@/utils/types";
 import Link from "next/link";
 import { NextRouter, useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-const NavBar = () => {
+
+const NavBar = ({ showLinks, setShowLinks }: navBarProps) => {
   const router: NextRouter = useRouter();
   const [activeLink, setActiveLink] = useState<string>("resume");
-  const [showLinks, setShowLinks] = useState<boolean>(false);
 
   const toggleLinks = () => {
-    setShowLinks(prev => !prev)
+    setShowLinks((prev: boolean) => !prev)
   }
 
   useEffect(() => {

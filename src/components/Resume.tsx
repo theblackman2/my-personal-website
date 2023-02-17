@@ -4,15 +4,19 @@ import { FaTwitter, FaLinkedin } from "react-icons/fa"
 import { BsGithub } from "react-icons/bs"
 import { AiFillInstagram } from "react-icons/ai"
 import Link from 'next/link';
+import { resumeProps } from "@/utils/types"
 
 
+const Resume = ({ showLinks, screenWidth }: resumeProps) => {
 
-const Resume = () => {
   return (
     <div id="resume">
       <div className="top">
         <div className="avatar">
-          <Image src={AvatarImage} alt="Avatart" />
+          {
+            !showLinks || screenWidth > 800 ?
+              <Image src={AvatarImage} alt="Avatart" /> : null
+          }
         </div>
         <div className="personal-infos">
           <h2 className="name">Pascal Kasonga</h2>

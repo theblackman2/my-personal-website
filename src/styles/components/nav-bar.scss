@@ -46,6 +46,7 @@
       justify-content: center;
       gap: 3rem;
       width: fit-content;
+      // z-index: 100;
 
       a {
         font-size: 18px;
@@ -53,7 +54,8 @@
         color: $text-color;
         transition: all 300ms ease-in;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $primary-color;
         }
       }
@@ -77,10 +79,10 @@
       .links.show {
         position: fixed;
         background-color: $white-color;
-        top: 95px;
+        top: 90px;
         left: 0;
         width: 100vw;
-        height: calc(100vh - 95px);
+        height: calc(100vh - 90px);
         display: flex;
         flex-direction: column;
         // gap: 4rem;
