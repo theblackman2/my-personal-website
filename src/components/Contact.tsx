@@ -10,8 +10,9 @@ import axios, { AxiosError } from "axios"
 import Swal from "sweetalert2"
 import { useState } from "react"
 import { contactFormData } from "@/utils/types"
-import { GrSend } from "react-icons/gr"
+import { toast, ToastContainer } from 'react-toastify';
 import { IoIosSend } from "react-icons/io"
+import makeToast from "@/utils/toast"
 
 const Contact = () => {
   const [formData, setFormData] = useState<contactFormData>({
@@ -33,11 +34,11 @@ const Contact = () => {
   const sendEmail = async (e: any) => {
     e.preventDefault();
     if (!formData.email || !formData.names || !formData.message) {
-      return
+      return makeToast("warning", "You must fill all fields")
     }
     setLoading(true)
     try {
-      const response = await axios({
+      await axios({
         method: "POST",
         url: process.env.NEXT_PUBLIC_EMAIL_URL,
         data: {
@@ -47,15 +48,10 @@ const Contact = () => {
           template_params: formData,
         }
       })
-      console.log(response)
+      makeToast("success", "Your message has been sent successfully")
     } catch (error) {
       console.log(error)
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "Something went wrong, please try again",
-        confirmButtonText: "Close",
-      })
+      makeToast("error", "Oups... Somethingwent wrong, please try again!!")
     } finally {
       setLoading(false)
     }
