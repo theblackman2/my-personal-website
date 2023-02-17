@@ -6,3 +6,51 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+body {
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white-color;
+    /* color of the tracking area */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 20px;
+  }
+
+  .body-content {
+    margin-top: 95px;
+    padding: 2rem 3rem;
+    background: $body-background;
+    min-height: calc(100vh - 95px);
+  }
+
+  @media (max-width: $break-point) {
+    .body-content {
+      padding: 1rem;
+    }
+  }
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+a {
+  all: unset;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// Import component styles
+@import "./components/nav-bar.scss";
+@import "./components/resume.scss";

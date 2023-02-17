@@ -1,11 +1,29 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import NavBar from '@/components/NavBar'
+import Resume from '@/components/Resume'
+import { useState, useEffect } from 'react';
+import { windowSize } from '@/utils/types';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [showLinks, setShowLinks] = useState<boolean>(false);
+  const [windowSize, setWindowSize] = useState<windowSize>()
+
+  const trackScreenSizeChange = () => {
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", trackScreenSizeChange)
+
+    return () => window.removeEventListener("resize", trackScreenSizeChange)
+  }, [])
+
   return (
     <>
       <Head>
@@ -14,8 +32,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container">
-        <p className="text">Hello word</p>
+      <NavBar showLinks={showLinks} setShowLinks={setShowLinks} />
+      <div className="body-content">
+        <Resume showLinks={showLinks} screenWidth={windowSize?.width ?? 0} />
       </div>
     </>
   )
