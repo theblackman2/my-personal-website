@@ -4,6 +4,7 @@
 @import "./components/resume.scss";
 @import "./components/services.scss";
 @import "./components/service.scss";
+@import "./components/contact.scss";
 
 * {
   padding: 0;
@@ -64,4 +65,13 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+}
+
+input {
+  all: unset;
+}
+
+textarea {
+  all: unset;
+  resize: none;
 }

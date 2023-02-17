@@ -20,3 +20,9 @@ export type serviceProps = {
   description: string,
   image: ReactElement
 }
+
+export type contactFormData = {
+  names: string,
+  email: string,
+  message: string,
+}
