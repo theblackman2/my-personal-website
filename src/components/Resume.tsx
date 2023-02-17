@@ -15,7 +15,7 @@ const Resume = ({ showLinks, screenWidth }: resumeProps) => {
         <div className="avatar">
           {
             !showLinks || screenWidth > 800 ?
-              <Image src={AvatarImage} alt="Avatart" /> : null
+              <Image placeholder="blur" src={AvatarImage} alt="Avatart" /> : null
           }
         </div>
         <div className="personal-infos">
