@@ -1,3 +1,4 @@
+import { ReactElement } from "react"
 
 export type resumeProps = {
   showLinks: boolean,
@@ -12,4 +13,10 @@ export type navBarProps = {
 export type windowSize = {
   width: number,
   height: number,
+}
+
+export type serviceProps = {
+  title: string,
+  description: string,
+  image: ReactElement
 }

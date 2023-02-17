@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar'
 import Resume from '@/components/Resume'
 import { useState, useEffect } from 'react';
 import { windowSize } from '@/utils/types';
+import Services from '@/components/Services';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,7 +35,10 @@ export default function Home() {
       </Head>
       <NavBar showLinks={showLinks} setShowLinks={setShowLinks} />
       <div className="body-content">
-        <Resume showLinks={showLinks} screenWidth={windowSize?.width ?? 0} />
+        <div className="container">
+          <Resume showLinks={showLinks} screenWidth={windowSize?.width ?? 0} />
+          <Services />
+        </div>
       </div>
     </>
   )
