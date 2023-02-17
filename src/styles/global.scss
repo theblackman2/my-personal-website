@@ -6,3 +6,16 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+body {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Import component styles
+
+@import "./components/nav-bar.scss";
