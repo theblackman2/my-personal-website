@@ -5,6 +5,7 @@ import Resume from '@/components/Resume'
 import { useState, useEffect } from 'react';
 import { windowSize } from '@/utils/types';
 import Services from '@/components/Services';
+import Contact from '@/components/Contact';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,6 +39,7 @@ export default function Home() {
         <div className="container">
           <Resume showLinks={showLinks} screenWidth={windowSize?.width ?? 0} />
           <Services />
+          <Contact />
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import AvatarImage from "./../../public/images/avatar.png"
-import { FaTwitter, FaLinkedin } from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa"
 import { BsGithub } from "react-icons/bs"
 import { AiFillInstagram } from "react-icons/ai"
 import Link from 'next/link';

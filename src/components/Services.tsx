@@ -29,7 +29,7 @@ const Services = () => {
             <Service image={<Image src={OthersImage} alt="Others illustration" placeholder="blur" />} title="Others" description="Flutter(Dart), React Native, Python" />
           </div>
         </div>
-        <div className="contact-link"><p>Want my services? Let's discuss <Link href="#contact">here</Link></p></div>
+        {/* <div className="contact-link"><p>Want my services? Let's discuss <Link href="#contact">here</Link></p></div> */}
       </div>
     </div>
   )
