@@ -9,10 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [showLinks, setShowLinks] = useState<boolean>(false);
-  const [windowSize, setWindowSize] = useState<windowSize>({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  })
+  const [windowSize, setWindowSize] = useState<windowSize>()
 
   const trackScreenSizeChange = () => {
     setWindowSize({
@@ -37,7 +34,7 @@ export default function Home() {
       </Head>
       <NavBar showLinks={showLinks} setShowLinks={setShowLinks} />
       <div className="body-content">
-        <Resume showLinks={showLinks} screenWidth={windowSize.width} />
+        <Resume showLinks={showLinks} screenWidth={windowSize?.width ?? 0} />
       </div>
     </>
   )
