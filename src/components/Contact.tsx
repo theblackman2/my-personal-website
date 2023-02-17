@@ -10,7 +10,6 @@ import axios, { AxiosError } from "axios"
 import Swal from "sweetalert2"
 import { useState } from "react"
 import { contactFormData } from "@/utils/types"
-import { toast, ToastContainer } from 'react-toastify';
 import { IoIosSend } from "react-icons/io"
 import makeToast from "@/utils/toast"
 
