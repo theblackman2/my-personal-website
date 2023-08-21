@@ -1,21 +1,19 @@
 import Image from "next/image"
-import AvatarImage from "./../../public/images/avatar.png"
+import AvatarImage from "./../../public/images/me.jpg"
 import { FaLinkedin } from "react-icons/fa"
 import { BsGithub } from "react-icons/bs"
 import { AiFillInstagram } from "react-icons/ai"
 import Link from 'next/link';
 import { resumeProps } from "@/utils/types"
 
-
 const Resume = ({ showLinks, screenWidth }: resumeProps) => {
-
   return (
     <div id="resume">
       <div className="top">
         <div className="avatar">
           {
             !showLinks || screenWidth > 800 ?
-              <Image placeholder="blur" src={AvatarImage} alt="Avatart" /> : null
+              <Image width={250} height={230} placeholder="blur" src={AvatarImage} alt="Avatart" /> : null
           }
         </div>
         <div className="personal-infos">
@@ -41,7 +39,7 @@ const Resume = ({ showLinks, screenWidth }: resumeProps) => {
             About <span>Me</span>
           </h2>
           <p className="presentation">Hello! I'm Pascal Kasonga, an enthusiastic Congolese web and mobile developer. I like big challenges and learning new things, I'm always open to collaboration as a freelancer.</p>
-          <button className="download-resume">Download Resume</button>
+          {/* <button className="download-resume">Download Resume</button> */}
         </div>
         <div className="right">
           <div className="infos">

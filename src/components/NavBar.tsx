@@ -25,16 +25,7 @@ const NavBar = ({ showLinks, setShowLinks }: navBarProps) => {
         <span className="logo">
           <Link href="#resume">The <span>Black Man</span></Link>
         </span>
-        <nav className={`links ${showLinks ? "show" : "hide"}`}>
-          <Link className={activeLink == "resume" ? "active" : ""} href="#resume">Resume</Link>
-          <Link className={activeLink == "services" ? "active" : ""} href="#services">Services</Link>
-          <Link className={activeLink == "portfolio" ? "active" : ""} href="#portfolio">Portfolio</Link>
-          <Link className={activeLink == "contact" ? "active" : ""} href="#contact">Contact</Link>
-        </nav>
       </div>
-      <span onClick={toggleLinks} className="icon">{
-        showLinks ? <AiOutlineClose /> : <AiOutlineMenu />
-      }</span>
     </div>
   )
 }
