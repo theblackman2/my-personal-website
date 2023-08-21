@@ -50,7 +50,8 @@ const Contact = () => {
       makeToast("success", "Your message has been sent successfully")
     } catch (error) {
       console.log(error)
-      makeToast("error", "Oups... Somethingwent wrong, please try again!!")
+      // makeToast("error", "Oups... Somethingwent wrong, please try again!!")
+      makeToast("info", "Something went wrong, please try again and if this problem persists, please try to send an email.")
     } finally {
       setLoading(false)
     }

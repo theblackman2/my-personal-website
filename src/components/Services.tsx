@@ -18,14 +18,14 @@ const Services = () => {
           <div className="services">
             <Service title="Web development" description="I can create any kind of website or web application, from the graphic design to the development of functionalities." image={<Image placeholder="blur" src={WebImage} alt="web development illustration" />} />
             <Service title="Mobile Development" description="I can also create any kind of mobile application, from the graphic design, functionalities development and deployment." image={<Image placeholder="blur" src={MobileImage} alt="Mobile development illustration" />} />
-            <Service title="Application maintenance" description="For an application that already exists, I provide maintenance and add new features" image={<Image src={MaintenanceImage} alt="Maintenance illustration" placeholder="blur" />} />
+            <Service title="Application maintenance" description="For an application that already exists, I provide maintenance and add new features." image={<Image src={MaintenanceImage} alt="Maintenance illustration" placeholder="blur" />} />
           </div>
         </div>
         <div className="section">
           <h3 className="section-title">My <span>Skills</span></h3>
           <div className="services">
-            <Service image={<Image src={FrontenImage} alt="Frontend illustration" placeholder="blur" />} title="Frontend" description="Html, Css, Sass, React, Jquery, Angular, Next Js" />
-            <Service image={<Image src={BackendImage} alt="Backend illustration" placeholder="blur" />} title="Backend" description="Php, Node(Express), Nest Js, Laravel, " />
+            <Service image={<Image src={FrontenImage} alt="Frontend illustration" placeholder="blur" />} title="Frontend" description="Html, Css, Sass, React, Jquery, Angular, Next Js, VueJs(Nuxt)" />
+            <Service image={<Image src={BackendImage} alt="Backend illustration" placeholder="blur" />} title="Backend" description="Php, Node(Express), Nest Js, Laravel, Python(Django)" />
             <Service image={<Image src={OthersImage} alt="Others illustration" placeholder="blur" />} title="Others" description="Flutter(Dart), React Native, Python" />
           </div>
         </div>
